@@ -1,0 +1,141 @@
+body { 
+	text-align: center; 
+	background-color: rgb(102, 102, 102) ;
+}
+
+#main{
+
+	background-color: rgb(221, 221, 221);
+}
+/*
+* wrapper----the whole div part
+*/
+#wrapper { 
+	display: block; 
+	border: 1px #a2a2a2 solid; 
+	width:95%; 
+	margin:0px auto; 
+
+}
+
+/*
+* header part
+*/
+#header {border: 2px  black solid;}
+
+.test-banner{
+	height:200px;
+	width:100%;
+	overflow: hidden;
+}
+
+/*
+* content part
+*/
+
+#content { 
+	width: 75%; 
+	border: 2px 
+	green solid; 
+	float: right; 
+	background-color: rgb(221, 221, 221);
+}
+
+
+.blog-post-title{
+	color:brown;
+	font-size:45px;
+	text-decoration: none;
+}
+
+.blog-post-title:hover{
+	color: green;
+	text-decoration: none;
+}
+
+.ech-small{
+	cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+	text-align: center;
+	/*display affect a lot*/
+    display: inline-block;
+    color: #333;
+    
+    min-width: 80px;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+.ech-small:hover{
+
+    transform: scale(.9);
+}
+
+
+/*
+* sidebar part
+*/
+#sidebar { 
+	width: 24%; 
+	border: 2px 
+	orange solid; 
+	float: left; 
+	background-color: rgb(221, 221, 221);
+}
+
+.categories-ul{
+	list-style-type: none;
+}
+
+.archives-ul{
+	list-style-type: none;
+}
+
+
+#delimiter { clear: both; }
+
+/*
+* footer part
+*/
+
+#footer { 
+	border: 2px yellow solid; 
+	background-color: rgb(221, 221, 221);
+}
+
+/*
+* footer resource part
+*/
+
+#move-center{
+	float:center;
+	text-align: center;
+	margin-left:34%;
+
+}
+
+#fcol{
+	overflow: hidden;
+	
+
+}
+
+#fcol a{
+	color:orange;
+	text-decoration: none;
+}
+
+#fcol a:hover{
+	text-decoration: underline;
+}
+
+
+
+#fcol-ul li{
+	list-style-type: none;
+
+}
+
+.title { font-size: 11pt; font-family: verdana; font-weight: bold; }
+

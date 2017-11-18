@@ -1,0 +1,160 @@
+/*
+Theme Name: LearningWordPress
+Author: Tony Sun
+Author URI: http://yueran1.githun.io
+version: 1.0
+*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+/*
+change color of links
+bug, forget add , after link
+*/
+
+
+a:link,
+a:visited{
+    color:blue;
+
+}
+
+p{
+    line-height: 1.65em;
+}
+
+/*General Layou*/
+
+div.container{
+    
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+article.post{
+    border-bottom: 2px solid #999;
+}
+
+/*last-of-type Set last element of article*/
+article.post:last-of-type{
+    border-bottom: none;
+
+}
+
+/*Header*/
+.site-header{
+    border-bottom: 2px solid #999;
+}
+
+
+/*Footer*/
+
+.site-footer{
+    margin-top: 30px;
+    border-top: 2px solid #999;
+    
+}
+
+/*Navigation Menus*/
+.site-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav ul:before, .site-nav ul:after{content: ""; display: table;}
+.site-nav ul:after{clear:both;}
+.site-nav ul{*zoom:1;}
+
+.site-nav ul li{
+    list-style: none;
+    float: left;
+    
+}
+
+/*Site Header Menu*/
+.site-header nav ul li{
+    margin-right: 5px;
+}
+.site-header nav ul li a:link,
+.site-header nav ul li a:visited{
+    display: block;
+    padding: 10px 18px;
+    border: 1px solid #BBB;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.site-header nav ul li a:hover{
+    background-color: #ececec;
+}
+
+
+
+/*WP automatically add class current-menu-item to list item*/
+
+/*Bug, There is no space between li and '.'*/
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited{
+    background-color: #006ec3;
+    color: white;
+    text-decoration: none;
+
+}
+
+/*Footer Menu*/
+.site-footer nav ul li{
+    margin-right: 10px;
+    padding-right:10px;
+    /*Border between margin and padding*/
+    border-right: 1px dotted #BBB;
+}
+
+/*Page Layout*/
+article.page h2{
+    font-size: 225%;
+    margin-bottom: 15px;
+}
+
+/*Clearfix*/
+.clearfix:before, .clearfix:after{content:""; display:table;}
+.clearfix:after{clear:both;}
+.clearfix{*zoom:1;}
+/*上一行不小心打上一个; 导致下一行出问题*/
+
+/*Two Column Title Layout*/
+div.title-column{
+    width:30%;
+    float: left;
+    
+   
+}
+
+div.text-column{
+    width:70%;
+    float: right;
+    
+}
+
+/*info box styles*/
+div.info-box{
+    width:30%;
+    float: right;
+    margin:0 0 30px 30px;
+    padding: 10px;
+    background-color: #eee;
+
+
+}
+
+div.info-box h4{
+    margin-bottom: 6px;
+}
+div.info-box p{
+    font-size: 85%;
+}
