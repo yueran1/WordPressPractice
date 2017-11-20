@@ -2,7 +2,15 @@
 
 function learningWordPress_resources(){
 
-    wp_enqueue_style( 'style', get_stylesheet_uri());
+    //wp_enqueue_style( 'style', get_stylesheet_uri());
+
+    wp_enqueue_style(
+        'style', 
+        get_stylesheet_uri(),
+        array(),
+        rand(111,9999),
+        'all'
+    );
 
 }
 
@@ -40,6 +48,13 @@ function have_children(){
     return count($pages);
 
 }
+
+//cutomize excerpt word count length
+function custom_excerpt_length(){
+    return 25;
+}
+
+add_filter( 'excerpt_length','custom_excerpt_length' );
 
 
 ?>

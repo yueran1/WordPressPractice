@@ -6,6 +6,39 @@
 get_header( );
 
 if (have_posts()):
+
+
+    ?>
+
+    <h2><?php 
+    
+        if (is_category(  )){
+            //echo 'This is a category';
+            single_cat_title();
+        }elseif (is_tag()){
+            //echo 'Tag';
+            single_tag_title();
+        } elseif(is_author()){
+            //echo 'author';
+            the_post();
+            echo'Author Archives: '.get_the_author();
+            rewind_posts();
+        } elseif(is_day()){
+            //echo 'Day archive';
+            echo 'Daily Archives'. get_the_date();
+        } elseif(is_month()){
+            //echo 'Month';
+            //F -> month, Y-> year
+            echo 'Monthly Archives' . get_the_date('F Y');
+        } elseif(is_year()){
+            //echo 'Year';
+            echo 'Yearly Archives'. get_the_date('Y');
+        }else{
+            echo 'Archives';
+        }
+    
+    ?></h2>
+    <?php
     while (have_posts()): 
         the_post(); ?>
     
@@ -38,29 +71,8 @@ if (have_posts()):
             ?>
             
             </p>
-            <?php if(is_singular( )){
-                the_content( );
-            } else{?>
-
-                <!--明白了，这里是把文章内容展示出来-->
-
-                <?php 
-                //如果在dashboard里设置了more tag就显示excerpt tag
-                //否之显示全文
-                if ($post->post_excerpt){
-                    echo get_the_excerpt( );
-                    ?><a href="<?php the_permalink(); ?>">Read more&raquo;</a> <?php
-                }else{
-                    the_content();
-                }
-                
-                
-                ?>
-                
-
-            <?php } ?>
+            <?php the_excerpt();?>
          </article>
-          
         
         
         <?php endwhile;
