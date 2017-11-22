@@ -13,7 +13,8 @@ if (have_posts()):
             The title will show twice since there
             are two posts        
          -->
-         <article class="post">
+         <!--挖槽，这也行，用if condition定义div class-->
+         <article class="post <?php if (has_post_thumbnail() && ! is_singular()) {?> has-thumbnail <?php } ?>">
             <h2><a href="<?php the_permalink();?>"> <?php the_title(); ?></a></h2>
 
 
@@ -39,12 +40,23 @@ if (have_posts()):
             
             </p>
             <?php if(is_singular( )){
+                the_post_thumbnail('banner-image');
                 the_content( );
             } else{?>
 
+
+                <!--small-thumbnail是我们在function里面注册设置的，可以控制
+                图片大小 
+                Note: Somtime when u register new img size, u need delete and
+                reupload the img to show the changing
+                -->
+                <div class="post-thumbnail">
+                    <a href="<?php the_permalink()?>"><?php the_post_thumbnail('small-thumbnail'); ?></a>
+                </div>
                 <!--明白了，这里是把文章内容展示出来-->
 
                 <?php 
+
                 //如果在dashboard里设置了more tag就显示excerpt tag
                 //否之显示全文
                 if ($post->post_excerpt){

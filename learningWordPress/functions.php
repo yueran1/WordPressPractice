@@ -57,4 +57,21 @@ function custom_excerpt_length(){
 add_filter( 'excerpt_length','custom_excerpt_length' );
 
 
+function learningWordPress_setup(){
+
+    //Navigation Menus
+    register_nav_menus( array(
+        'Primary' =>__('Primary Menu'),
+        'footer' => __('Footer Menu')
+    ) );
+    //Add feature image support
+    add_theme_support( 'post-thumbnails' );
+
+    //set image size, to make the_post_thumbnail() be able to use
+    add_image_size('small-thumbnail',180,90,true);
+    add_image_size( 'banner-image', 920, 210, true );
+}
+
+add_action('after_setup_theme','learningWordPress_setup');
+
 ?>
