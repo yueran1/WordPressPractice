@@ -8,8 +8,11 @@ get_header( );
 if (have_posts()):
     while (have_posts()): 
         the_post(); 
-    
-        get_template_part('content');
+        
+        //When we have the second parameter get_post_format()
+        //the format will follow the content-aside.php file we created
+        //Because we create a post with format aside
+        get_template_part('content', get_post_format());
         
     endwhile;
 

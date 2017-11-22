@@ -41,7 +41,7 @@ div.container{
 
 
 article.post{
-    border-bottom: 2px solid #999;
+    border-bottom: 0.5px solid #999;
 }
 
 
@@ -50,6 +50,53 @@ article.post{
 article.post:last-of-type{
     border-bottom: none;
 
+}
+
+/*Aside style*/
+article.post-aside,
+article.post-link
+{
+    font-size: 125%;
+    background-color: #FFF5cB;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.1);
+    margin-top: 8px;
+    margin-bottom: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/*Link Post Format Styles*/
+article.post-link{
+    padding: 0;
+    background-color: #E0EBFF;
+}
+
+article.post-link a{
+    display:block;
+    padding: 20px;
+}
+.mini-meta{
+    font-size: 68%;
+    margin:0;
+    color:#777;
+    
+}
+
+/*Post formart gallery style*/
+article.post-gallery{
+    background-color: #222;
+    color:#FFF;
+    padding: 20px;
+}
+
+article.post-gallery h2{
+    text-align:center;
+}
+
+article.post-gallery img{
+    border:none!important;
 }
 
 /*Header*/

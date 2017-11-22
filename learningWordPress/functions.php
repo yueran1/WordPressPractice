@@ -70,6 +70,14 @@ function learningWordPress_setup(){
     //set image size, to make the_post_thumbnail() be able to use
     add_image_size('small-thumbnail',180,90,true);
     add_image_size( 'banner-image', 920, 210, true );
+
+    //Add post format support
+    add_theme_support('post-formats', array(
+        'aside',
+        'gallery',
+        'link'
+
+    ));
 }
 
 add_action('after_setup_theme','learningWordPress_setup');
