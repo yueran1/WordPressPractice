@@ -16,6 +16,14 @@ pages with our CSS very easily-->
     <div class="container">
     <!-- site header-->
     <header class="site-header">
+
+        <!--Header search-->
+        <div class="hd-search">
+
+            <?php get_search_form()?>
+        </div>
+
+
         <!--bloginfo function allow us to display
             the blog name and blog description
         -->
