@@ -27,7 +27,7 @@ p{
     line-height: 1.65em;
 }
 
-/*General Layou*/
+/*General Layout*/
 
 div.container{
     
@@ -37,9 +37,14 @@ div.container{
     padding-right: 20px;
 }
 
+
+
+
 article.post{
     border-bottom: 2px solid #999;
 }
+
+
 
 /*last-of-type Set last element of article*/
 article.post:last-of-type{
@@ -230,7 +235,8 @@ img {
 
 .has-thumbnail{
     position: relative;
-    padding-left: 200px
+    padding-left: 200px;
+    padding-bottom: 10px;
 }
 
 .post-thumbnail{
