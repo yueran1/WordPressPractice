@@ -13,6 +13,8 @@
 pages with our CSS very easily-->
 <body <?php body_class(  );?>>
 
+	<div id="wptime-plugin-preloader"> </div>
+
     <div class="container">
     <!-- site header-->
     <header class="site-header">
